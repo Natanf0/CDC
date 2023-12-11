@@ -10,9 +10,10 @@
                 padding-right: 10px;
                 padding-bottom: 10px;
                 margin-left: 2px;
+                align-content: center;
             }
             body {
-                background-color: #fff189;
+                background-color: #f1ebbd;
                 margin: 15px;
                 padding: 2em;
                 font-family: -apple-system, system-ui, BlinkMacSystemFont,
@@ -21,7 +22,7 @@
             }
             .draggable ui-widget-content{
                 border: 1px black solid;
-                background-color: #e68301;
+                background-color: #605f5d;
                 width: 400px;
                 align-content: center;
             }
