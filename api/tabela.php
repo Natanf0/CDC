@@ -2,9 +2,6 @@
 
 require 'cdc.php';
 
-
-// Aqui vai ter a parte da pagina da tabela price
-
 function getLeftBoxHTMLText(float $precoAVista,float $precoAPrazo,int $numParcelas,float $taxaDeJuros,bool $temEntrada,int $mesesAVoltar):string{
     $precoAprazoTemp = numberToFixed((float) $precoAPrazo,2);
     $precoAVistaTemp = numberToFixed((float) $precoAVista,2);
@@ -13,7 +10,6 @@ function getLeftBoxHTMLText(float $precoAVista,float $precoAPrazo,int $numParcel
     $taxaDeJurosTemp = numberToFixed((float) $taxaDeJuros,4);
     $taxaDeJurosAnual = converterJurosMensalParaAnual($taxaDeJuros);
 
-    //    let jurosReal = calcularTaxaDeJuros(precoAVista,precoAPrazo,numParcelas,temEntrada) * 100;
     $coeficienteFinanciamento = calcularCoeficienteFinanciamento($taxaDeJuros,$numParcelas);
 
     $pmt = numberToFixed(calcularPMT($precoAVista,$coeficienteFinanciamento), 2);
@@ -33,22 +29,15 @@ function getLeftBoxHTMLText(float $precoAVista,float $precoAPrazo,int $numParcel
 }
 
 function getRightBoxHTMLText(float $precoAVista,float $precoAPrazo,int $numParcelas,float $taxaDeJuros,bool $temEntrada,float $valorCorrigido):string{
-
     $jurosReal = 0;
 
     $precoAprazoTemp = numberToFixed((float) $precoAPrazo,2);
     $precoAVistaTemp = numberToFixed((float) $precoAVista,2);
     $numParcelasTemp = (int) $numParcelas;
-
-    //numParcelas = (!temEntrada)? numParcelas: numParcelas + 1;
-
     $jurosReal = calcularTaxaDeJuros($precoAVista,$precoAPrazo, $numParcelas,$temEntrada) * 100;
 
-    
     $coeficienteFinanciamento = calcularCoeficienteFinanciamento($taxaDeJuros,$numParcelas);
-
     $jurosReal = numberToFixed($jurosReal,4);
- 
     $pmt = toFixed(calcularPMT($precoAVista,$coeficienteFinanciamento),2);
  
     $jurosEmbutido = (($precoAPrazo - $precoAVista) / $precoAVista) * 100;
@@ -70,9 +59,7 @@ function getRightBoxHTMLText(float $precoAVista,float $precoAPrazo,int $numParce
 
 
 function getTabelaPriceHTMLText(array $tabelaPrice):string{
-
     $table = "";
-
     for($i = 0; $i < count($tabelaPrice); $i++){
 
        if($i == 0){
@@ -85,13 +72,9 @@ function getTabelaPriceHTMLText(array $tabelaPrice):string{
          
             $table .= "</tr></thead>";
        }
-
        else{
-
            $table .= "<tr>";
            foreach($tabelaPrice[$i] as $itemTabelaa){
-
-            // Coloca Negrito se for último elemento (Totais)
             if($i == count($tabelaPrice) - 1){
                $table .= "<td> <b>  $itemTabelaa   </b> </td>";
             }
@@ -100,26 +83,20 @@ function getTabelaPriceHTMLText(array $tabelaPrice):string{
             }
 
            }
-
- 
            $table .= "</tr>";
        }
        
    }
-
-
    return $table;
 }
-
-
 
 function printPage(string $leftBoxContent,string $rightBoxContent,string $tabelaPriceContent):void{
     $finalText = <<<HTML
     
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="pt-br">
     <head>
-        <title>CDC</title>
+        <title>Credito Direto ao Consumidor - Tabela Price</title>
             <meta charset="utf8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -135,7 +112,6 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron&display=swap');
 
                     body{background-color: #f1ebbd;
-                        font-family: 'Bebas Neue', sans-serif;
                         font-family: 'Orbitron', sans-serif;}
                 
                     #table-content table, th, td{
@@ -177,8 +153,8 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                         margin: 0px;
                     }
                     #btn_nova_consulta {
-                        width: 20px;
-                        height: 12px;
+                        width: 80px;
+                        height: 50px;
 
                     }
                     #btn_nova_consulta a{
@@ -272,8 +248,5 @@ $tabelaPriceText =  getTabelaPriceHTMLText($tabelaPrice);
 $leftBoxText = getLeftBoxHTMLText($valorFinanciado,$valorFinal,$numeroParcelas,$juros,$temEntrada, $mesesAVoltar);
 $rightBoxText = getRightBoxHTMLText($valorFinanciado,$valorFinal,$numeroParcelas,$juros,$temEntrada, $valorCorrigido);
 
-
-
 printPage($leftBoxText,$rightBoxText,$tabelaPriceText);
-
 ?>

@@ -1,52 +1,5 @@
 <?php declare(strict_types=1);
 
-/*
-Sumario do Pdf:
-
-v = valor de empréstimo
-x = preço à prazo
-y = preço à vista
-p = número de prestações
-R = valor de cada prestação
-A = Valor presente = valor a vista [fator *= 1 + t][fator, x * fator]
-valor  futuro = x(inverso / dividir  (fator =/ 1+ t))CF = Coeficiente de financiamento
-t = taxa(porcentagem)
-k = fator aplicado
-
-
-Valor a voltar: Adiantamento(pagar) 
-
-Valor final: Soma das parcelas
-
-
-Multiplicar juros por saldo devedor pra ter o primo juros
-    -> Juros[0] = juros do Usuario
-    -> Os demais = Juros * saldo
-     
-Se tem entrada, primeira prestacao = 0; amortização = 0; juros = juros; amortização = preco a vista, 
-
-Se tiver taxa a juros e valor a vista -> Calular o valor a prazo
-Se tiver valor a vista e a prazo -> Calcular taxa de juros commetodo de newton
-
-
-// ao usar navbar escuro, colocar navbar-dark dentro da classe e style = "background:<cor>"
-
-
-// CF * y = x
-
-*/
-
-// desconto racional por dentro | ou desconto por dentro
-
-
-/*
-TODO: Calcular coisas antes da tabela price. Apenas pegar parametros necessarios
-  - Se possivel, apenas usar np,pmt,t,pv
-
-  - Tirar calculos de dentro da funcao getTabelaPrice()
-*/
-
-
 function numberToFixed(float $num, int $decimals):float{
     return (float) number_format($num, $decimals, '.', "");
 }
@@ -64,7 +17,6 @@ function fe(bool $ehPrimeiraTaxa,float $taxaJuros):float{
 function calcularCoeficienteFinanciamento(float $taxaJuros,int $quantidadeParcelas):float{
 
     $taxaCorrigida = ($taxaJuros > 1) ? $taxaJuros / 100 : $taxaJuros;
-    // taxaCorrigida /= 100;
 
     return $taxaCorrigida / (1 - pow(1 + $taxaCorrigida, $quantidadeParcelas * -1) );
 }
@@ -100,7 +52,7 @@ function converterJurosMensalParaAnual(float $juros):float{
 
 function calcularTaxaDeJuros(float $precoAVista,float  $precoAPrazo,int $numParcelas,bool $temEntrada):float {
     $tolerancia = 0.0001;  
-    $taxaDeJuros = 0.1; // Palpite inicial
+    $taxaDeJuros = 0.1; 
     $taxaDeJurosAnterior = 0.0;
 
 
@@ -230,11 +182,4 @@ function calcularValorDerivadaFuncao(float $precoAPrazo,float $taxaDeJuros,float
 
     return $tabelaPrice;
 }
-
-
-
-
-
-
-
 ?>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt" xml:lang="pt" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>CDC</title>
+        <title>Credito Direto ao Consumidor - Consulta</title>
         <meta charset="utf8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -112,12 +112,8 @@
                     <input name="dp" value="0" type="hidden"><!-- Valor pra caso a checkbox esteja vazia -->
                     <input id="idp" type="checkbox" name="dp" value="1" /><br />
 
-                    <!-- <label for="ipr">Imprimir?</label>
-                    <input id="ipr" type="checkbox" name="pr" value="1" /><br /> -->
                 </div>
                 <div class="messages">
-                    
-                  
                     <input type="submit" name="submit" id="submitButton" class="button" type="button" value="Calcular" style="display: block;" />
 
                 </div>
@@ -132,10 +128,7 @@
             </div>
         </fieldset>
 
-      
-
-
-        <!-- <script type="module" src="funcoesFront.js"></script> -->
+        <!-- Mensagens de Crítica: -->
         <script type="text/javascript">
             $("#submitButton").on("click", function (event) {
                 var errorMessage = "";
@@ -172,7 +165,7 @@
                     $("#errorMessage").hide();
                 }
             });
-            dragAndSave("#cdcfieldset"); // $("#cdcfieldset").draggable()
+            dragAndSave("#cdcfieldset");
 
            
         </script>
