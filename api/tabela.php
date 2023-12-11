@@ -142,8 +142,6 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
 
                     }
 
-
-
                     #left-box, #right-box{
                         min-width: 10%;
                         max-width: 30%;
@@ -157,7 +155,6 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                         display: block;
                         flex-wrap: wrap;
                         justify-content: space-around;
-
                         margin-top: 20px;
                     }
 
@@ -170,7 +167,8 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                         justify-content: center;
                     }
                     #result-container{
-                        display: block;
+                        display: flex;
+                        flex-wrap: wrap;
                     }
                     
             </style>
@@ -192,7 +190,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
 
                 <div id="table-container">
                 
-                    <h1>Tabela Price</h1>
+                    <h1>TABELA PRICE</h1>
                     
                     <table id="table-content">
                         {$tabelaPriceContent}
