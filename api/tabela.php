@@ -109,10 +109,9 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
             
             
             <style>
-                @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron&display=swap');
-
+                @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
                     body{background-color: #f1ebbd;
-                        font-family: 'Orbitron', sans-serif;}
+                        font-family: 'Roboto Condensed', sans-serif;}
                 
                     #table-content table, th, td{
                         border: 1px solid black;
