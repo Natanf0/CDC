@@ -141,8 +141,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                     }
 
                     #left-box, #right-box{
-                        min-width: 10%;
-                        max-width: 30%;
+                        width: 30%;
                         border-style: dotted;
                         padding: 20px;
                         margin-bottom: 30px;
@@ -151,7 +150,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
 
                     #summary-container{
                         display: block;
-                        max-width: 30%;
+                        width: 30%;
                         flex-wrap: wrap;
                         justify-content: space-around;
                         margin-top: 20px;
@@ -164,7 +163,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
-                        width: 100%
+                        width: 50%
                     }
                     #result-container{   
                         display: flex;
