@@ -137,9 +137,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                         border: 1px solid black;
                         font-size: 20px;
                         padding: 5px;
-
                         text-align: center;
-
                     }
 
                     #left-box, #right-box{
@@ -149,7 +147,6 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                         padding: 20px;
                         margin-bottom: 30px;
                         border-radius: 10px;
-                        float: left;
                     }
 
                     #summary-container{
@@ -168,9 +165,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                         justify-content: center;
                         width: 100%
                     }
-                    #result-container{
-                        float: right;
-                        
+                    #result-container{   
                     }
                     
             </style>
