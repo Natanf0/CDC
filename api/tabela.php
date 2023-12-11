@@ -149,6 +149,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                         padding: 20px;
                         margin-bottom: 30px;
                         border-radius: 10px;
+                        float: left;
                     }
 
                     #summary-container{
