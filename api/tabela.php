@@ -130,8 +130,13 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
             />
             <script src="js-webshim/minified/polyfiller.js"></script>
             
+            
             <style>
-                    body{background-color: #f1ebbd;}
+                @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron&display=swap');
+
+                    body{background-color: #f1ebbd;
+                        font-family: 'Bebas Neue', sans-serif;
+                        font-family: 'Orbitron', sans-serif;}
                 
                     #table-content table, th, td{
                         border: 1px solid black;
@@ -157,7 +162,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                     }
 
                     #table-container{
-                        margin-top: 20px;
+                        margin-top: 18px;
                         display: flex;
                         flex-wrap: wrap;
                         flex-direction: column;
@@ -170,6 +175,15 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                     }
                     h1{
                         margin: 0px;
+                    }
+                    #btn_nova_consulta {
+                        width: 20px;
+                        height: 12px;
+
+                    }
+                    #btn_nova_consulta a{
+                        style: none;
+                        color: black;
                     }
                     
             </style>
@@ -199,7 +213,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                 </div>
 
 
-                
+             <button id="btn_nova_consulta"><a href="https://cdc-cyan.vercel.app/">Nova Consulta</a></button>   
             </div>
         
         </body>

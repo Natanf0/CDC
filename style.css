@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron&display=swap');
+
 
             .box {
                 background-color: antiquewhite;
@@ -16,9 +18,8 @@
                 background-color: #f1ebbd;
                 margin: 15px;
                 padding: 2em;
-                font-family: -apple-system, system-ui, BlinkMacSystemFont,
-                    "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial,
-                    sans-serif;
+                font-family: 'Bebas Neue', sans-serif;
+                font-family: 'Orbitron', sans-serif;
             }
             .draggable ui-widget-content{
                 border: 1px black solid;
