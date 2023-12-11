@@ -12,8 +12,8 @@
                 margin-left: 2px;
             }
             body {
-                background-color: #f0f0f2;
-                margin: 0;
+                background-color: #fff189;
+                margin: 15px;
                 padding: 2em;
                 font-family: -apple-system, system-ui, BlinkMacSystemFont,
                     "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial,
@@ -21,8 +21,9 @@
             }
             .draggable ui-widget-content{
                 border: 1px black solid;
-                background-color: #cac3ba;
+                background-color: #e68301;
                 width: 400px;
+                align-content: center;
             }
             input, button {
                 margin: 10px 3px 10px 3px;
