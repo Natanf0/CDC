@@ -166,7 +166,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
-                        max-width: 70%
+                        width: 100%
                     }
                     #result-container{
                         float: right;
