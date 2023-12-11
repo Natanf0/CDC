@@ -167,8 +167,8 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                         justify-content: center;
                     }
                     #result-container{
-                        display: flex;
-                        flex-wrap: wrap;
+                        float: right;
+                        
                     }
                     
             </style>
