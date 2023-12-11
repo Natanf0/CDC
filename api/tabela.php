@@ -151,6 +151,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
 
                     #summary-container{
                         display: block;
+                        max-width: 30%;
                         flex-wrap: wrap;
                         justify-content: space-around;
                         margin-top: 20px;
@@ -166,6 +167,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                         width: 100%
                     }
                     #result-container{   
+                        display: flex;
                     }
                     
             </style>
