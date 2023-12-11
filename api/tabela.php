@@ -136,8 +136,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                     #table-content table, th, td{
                         border: 1px solid black;
                         font-size: 20px;
-                        padding-left, padding-right: 5px;
-                        padding-top, padding-bottom: 0px;
+                        padding: 5px;
                         text-align: center;
                     }
 
@@ -158,7 +157,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                     }
 
                     #table-container{
-                        margin-top: 30px;
+                        margin-top: 20px;
                         display: flex;
                         flex-wrap: wrap;
                         flex-direction: column;
@@ -168,6 +167,9 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                     }
                     #result-container{   
                         display: flex;
+                    }
+                    h1{
+                        margin: 0px;
                     }
                     
             </style>
