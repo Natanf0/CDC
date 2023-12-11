@@ -131,6 +131,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
             <script src="js-webshim/minified/polyfiller.js"></script>
             
             <style>
+                    body{background-color: #f1ebbd;}
                 
                     #table-content table, th, td{
                         border: 1px solid black;
@@ -145,6 +146,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
 
                     #left-box, #right-box{
                         min-width: 10%;
+                        max-width: 30%;
                         border-style: dotted;
                         padding: 20px;
                         margin-bottom: 30px;
