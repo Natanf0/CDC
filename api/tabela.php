@@ -129,8 +129,46 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                 href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
             />
             <script src="js-webshim/minified/polyfiller.js"></script>
-            <link rel="stylesheet" href="style.css">
             
+            <style>
+                
+                    #table-content table, th, td{
+                        border: 1px solid black;
+                        font-size: 20px;
+                        padding: 5px;
+
+                        text-align: center;
+
+                    }
+
+
+
+                    #left-box, #right-box{
+                        min-width: 10%;
+                        border-style: dotted;
+                        padding: 20px;
+                        margin-bottom: 30px;
+                        border-radius: 10px;
+                    }
+
+                    #summary-container{
+                        display: block;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+
+                        margin-top: 20px;
+                    }
+
+                    #table-container{
+                        margin-top: 30px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    
+            </style>
     </head>
     <body>
         <div id="result-container">
