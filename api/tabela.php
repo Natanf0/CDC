@@ -154,12 +154,9 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                     #btn_nova_consulta {
                         width: 80px;
                         height: 50px;
-
+                        border: solid, black, 1px; 
                     }
-                    #btn_nova_consulta a{
-                        style: none;
-                        color: black;
-                    }
+                    
                     
             </style>
     </head>
@@ -188,7 +185,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                 </div>
 
 
-             <button id="btn_nova_consulta"><a href="https://cdc-cyan.vercel.app/">Nova Consulta</a></button>   
+             <button id="btn_nova_consulta" link="https://cdc-cyan.vercel.app/">Nova Consulta</button>   
             </div>
         
         </body>

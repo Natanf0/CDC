@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron&display=swap');
-
+@import url('https://fonts.googleapis.com/css2? family= Roboto+Condensed & display=swap');
 
             .box {
                 background-color: antiquewhite;
@@ -19,7 +18,7 @@
                 margin: 15px;
                 padding: 2em;
             
-                font-family: 'Orbitron', sans-serif;
+                font-family: 'Roboto Condensed', sans-serif;
             }
             .draggable ui-widget-content{
                 border: 1px black solid;
