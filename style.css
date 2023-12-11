@@ -114,11 +114,10 @@
                 padding: 20px;
                 margin-bottom: 30px;
                 border-radius: 10px;
-
             }
 
             #summary-container{
-                display: block;
+                display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
 
