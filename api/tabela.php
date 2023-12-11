@@ -136,12 +136,13 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                     #table-content table, th, td{
                         border: 1px solid black;
                         font-size: 20px;
-                        padding: 5px;
+                        padding-left, padding-right: 5px;
+                        padding-top, padding-bottom: 0px;
                         text-align: center;
                     }
 
                     #left-box, #right-box{
-                        width: 30%;
+                        width: 100%;
                         border-style: dotted;
                         padding: 20px;
                         margin-bottom: 30px;
