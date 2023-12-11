@@ -169,6 +169,9 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                         align-items: center;
                         justify-content: center;
                     }
+                    #result-container{
+                        display: block;
+                    }
                     
             </style>
     </head>
