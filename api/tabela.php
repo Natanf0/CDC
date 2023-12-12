@@ -176,7 +176,6 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                 </div>
 
                 <div id="table-container">
-                
                     <h1>TABELA PRICE</h1>
                     
                     <table id="table-content">
@@ -185,7 +184,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                 </div>
 
 
-             <button id="btn_nova_consulta" link="https://cdc-cyan.vercel.app/">Nova Consulta</button>   
+             <a href="https://cdc-cyan.vercel.app/"><button id="btn_nova_consulta">Nova Consulta</button></a>  
             </div>
         
         </body>
