@@ -121,6 +121,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                     }
 
                     #left-box, #right-box{
+                        background-color: #f7e666;
                         width: 100%;
                         border-style: dotted;
                         padding: 20px;
@@ -137,7 +138,7 @@ function printPage(string $leftBoxContent,string $rightBoxContent,string $tabela
                     }
 
                     #table-container{
-                        margin-top: 18px;
+                        margin-top: 13px;
                         display: flex;
                         flex-wrap: wrap;
                         flex-direction: column;
